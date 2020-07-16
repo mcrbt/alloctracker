@@ -45,7 +45,8 @@ tracked:
 
 
 The functions `strdup`, `getline`, and `getdelim`, are not available with
-all C standards and/or platforms (see section *C standard compliance*).
+all C standards and/or platforms (see
+[C standard compliance](https://github.com/mcrbt/alloctracker#c-standard-compliance)).
 However, all functions should be available on *GNU/Linux* operating systems
 using the C standard *GNU99* (GCC option `-std=gnu99`).
 
@@ -121,8 +122,8 @@ code are:
 - `AT_FREE_ALL`:    free all unfreed dynamic memory allocated on the heap,
                     and close any open files left
 
-A small demonstration code (`src/at_test.c`) is provided (see section
-*Demonstration*).
+A small demonstration code (`src/at_test.c`) is provided (see
+[Demonstration](https://github.com/mcrbt/alloctracker#demonstration)).
 
 **NOTE**: To be able to print the report `AT_FREE_ALL` **must not** be called
 before `AT_REPORT`. Otherwise nothing is printed when calling `AT_REPORT`.
@@ -187,7 +188,8 @@ $ valgrind bin/alloctracker_test
 `valgrind` and `alloctracker` yield different resource usage statistics
 (e.g. the overall number of allocated bytes), because `alloctracker`
 intentionally does not record its own allocations for maintaining the dynamic
-lists (see section *Description*) while `valgrind` does, obviously.
+lists (see [Description](https://github.com/mcrbt/alloctracker#description))
+while `valgrind` does, obviously.
 
 Anyway `valgrind` should report
 
