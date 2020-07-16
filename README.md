@@ -67,7 +67,7 @@ against the target.
 The provided *Makefile* can be used to compile `alloctracker` to a sole
 object file `obj/alloctracker.o`.
 
-```bash
+```
 $ make
 ```
 
@@ -78,14 +78,14 @@ Some basic demonstration code code is contained in `src/at_test.c` to show
 `alloctracker`. The demonstration code can be compiled using the following
 command, where `alloctracker` is automatically linked.
 
-```bash
+```
 $ make test
 ```
 
 The respective executable is placed under the `./bin` directory and can be
 run with no arguments by:
 
-```bash
+```
 $ bin/alloctracker_test
 ```
 
@@ -198,15 +198,15 @@ Anyway `valgrind` should report "`in use at exit: 0 bytes in 0 blocks`" and
 or *C90*, respectively). This means it can be compiled for the ANSI standard
 with the GCC options `-ansi` without any warnings, allowing `alloctracker`
 to be linked against any C project that is ANSI compliant itself, as well.
-Respective *feature macros* are used to exclude source code not being
+Respective *feature test macros* are used to exclude source code not being
 available in the requested C standard.
 
 Some of the functions `alloctracker` overrides, are *GNU extensions*.
-Affected functions protected by feature macros are `strdup`, `getline`, and
-`getdelim`, as well as the *builtin* `__func__` (for substituting the current
-function). On GNU/Linux systems the function `strdup` may be available from
-the C standard *C99* (GCC option `-std=c99`) onward, while `getline` and
-`getdelim` at least require the standard *GNU99* (`-std=gnu99`).
+Affected functions protected by feature test macros are `strdup`, `getline`,
+and `getdelim`, as well as the *builtin* `__func__` (for substituting the
+current function's name). On GNU/Linux systems the function `strdup` may be
+available from the C standard *C99* (GCC option `-std=c99`) onward, while
+`getline` and `getdelim` at least require the standard *GNU99* (`-std=gnu99`).
 
 To ensure the demonstration code shows all functionality the Makefile defines
 the C standard as `-std=gnu99`. For other projects applying `alloctracker` the
