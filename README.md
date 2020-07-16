@@ -188,7 +188,13 @@ $ valgrind bin/alloctracker_test
 (e.g. the overall number of allocated bytes), because `alloctracker`
 intentionally does not record its own allocations for maintaining the dynamic
 lists (see section *Description*) while `valgrind` does, obviously.
-Anyway `valgrind` should report "`in use at exit: 0 bytes in 0 blocks`" and
+
+Anyway `valgrind` should report
+
+"`in use at exit: 0 bytes in 0 blocks`"
+
+and
+
 "`0 errors from 0 contexts (suppressed: 0 from 0)`".
 
 
