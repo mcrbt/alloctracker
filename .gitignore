@@ -1,0 +1,7 @@
+/bin/
+/obj/
+/tst/
+/src/*~
+core.*
+*.txz
+*~
