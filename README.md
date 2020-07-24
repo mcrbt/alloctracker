@@ -171,9 +171,9 @@ overridden library functions and different C standards, and language, or
 compiler extensions, respectively. Consequently, `valgrind` is able to detect
 memory blocks of invalid size, for instance.
 
-For more information on the `valgrind` tool suite take a look at its homepage
-[Valgrind](https://www.valgrind.org). Officially `valgrind` is only
-distributed as source code, such as
+For more information on the `valgrind` tool suite its homepage
+[https://www.valgrind.org](https://www.valgrind.org) can be taken for
+reference. Officially `valgrind` is only distributed as source code, such as
 [here](https://www.valgrind.org/downloads/current.html#current).
 
 <br/>
